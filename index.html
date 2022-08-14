@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="./src/avatar.png" alt="imagem-de-perfil" width="100"> <br>
+
+            <div>
+                <input class="inputField" id="usr" type="text" placeholder="USUÁRIO">
+            </div>
+
+            <div>
+                <img src="./src/eye.webp" id="olho" class="olho">
+                <input class="inputField" id="pass" type="password" placeholder="SENHA"> 
+            </div>
+            <input class="confirm" type="button" value="LOGIN"> <br>
+
+            <p>
+                <input class="remember" type="checkbox" name="remember" id="remember">
+                <label for="remember">Lembrar usuário</label>
+                <a href="#">Esqueceu sua senha?</a>
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    let btn = document.getElementById("olho");
+    btn.addEventListener("click", function() {
+    let input = document.getElementById("pass");
+
+    if(input.getAttribute("type") == "password") {
+        input.setAttribute("type", "text");
+    } else {
+        input.setAttribute("type", "password");
+    }});
+</script>
+</html>
